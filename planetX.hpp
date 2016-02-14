@@ -7,6 +7,10 @@ Objective: Header File for Lab05 on Points & Lines
 #ifndef planetX_HPP
 #define planetX_HPP
 #include "CGLabmain.hpp"
+#include "utilities/Mesh.hpp"
+#include "utilities/Extrusion.hpp"
+#include "utilities/Loft.hpp"
+#include "utilities/Replicate.hpp"
 namespace planetX
 {
 //class declaration

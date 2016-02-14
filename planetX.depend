@@ -15,13 +15,108 @@
 	<iostream>
 	<GL/glut.h>
 
-1455466117 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1455472391 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
+	"utilities/Mesh.hpp"
+	"utilities/Extrusion.hpp"
+	"utilities/Loft.hpp"
+	"utilities/Replicate.hpp"
 
-1455466136 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1455472966 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	<cmath>
 	<cstdlib>
 	<ctime>
+	"utilities/Mesh.hpp"
+	"utilities/Extrusion.hpp"
+	"utilities/Loft.hpp"
+	"utilities/Replicate.hpp"
+
+1452589248 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\mesh.hpp
+	"VecMatMath.hpp"
+	"Transformable.hpp"
+	"Drawable.hpp"
+	<vector>
+	<string>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+
+1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\vecmatmath.hpp
+	<cmath>
+	<algorithm>
+	<functional>
+	<array>
+	<vector>
+	<float.h>
+
+1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\transformable.hpp
+	<functional>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	"VecMatMath.hpp"
+
+1452529274 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\drawable.hpp
+
+1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\extrusion.hpp
+	<vector>
+	"VecMatMath.hpp"
+	"Drawable.hpp"
+
+1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\loft.hpp
+	"VecMatMath.hpp"
+	<vector>
+
+1453957799 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\replicate.hpp
+	<vector>
+	"VecMatMath.hpp"
+	"Drawable.hpp"
+	"Mesh.hpp"
+	<cmath>
+
+1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\dependencies\glut\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1452573037 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\extrusion.cpp
+	"Extrusion.hpp"
+	<OpenGL/gl.h>
+	<GL/gl.h>
+
+1452537799 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\loft.cpp
+	"Loft.hpp"
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<iostream>
+
+1452247374 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\mesh.cpp
+	"Mesh.hpp"
+	"ObjReader.hpp"
+
+1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\objreader.hpp
+	"VecMatMath.hpp"
+	<vector>
+
+1452247374 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\objreader.cpp
+	"ObjReader.hpp"
+	"VecMatMath.hpp"
+	<stdio.h>
+	<map>
+	<cstring>
+
+1453957912 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\replicate.cpp
+	"Replicate.hpp"
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<iostream>
+	<cmath>
+
+1452247374 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\transformable.cpp
+	"Transformable.hpp"
+
+1452579242 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\vecmatmath.cpp
+	"VecMatMath.hpp"
+	<cmath>
+	<cassert>
 
