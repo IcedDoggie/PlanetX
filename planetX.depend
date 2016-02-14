@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1455466063 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglabmain.cpp
+	"CGLabxx.hpp"
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	<cmath>
+	<GL/glut.h>
+	"CGLabmain.hpp"
+	"planetX.hpp"
+
+1447696789 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglabmain.hpp
+	<string>
+	<cmath>
+	<iostream>
+	<GL/glut.h>
+
+1455466117 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+	"CGLabmain.hpp"
+
+1455466136 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+	<GL/glut.h>
+	"planetX.hpp"
+	<cmath>
+	<cstdlib>
+	<ctime>
+
