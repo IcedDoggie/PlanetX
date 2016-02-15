@@ -11,22 +11,32 @@ Objective: Header File for Lab05 on Points & Lines
 #include "utilities/Extrusion.hpp"
 #include "utilities/Loft.hpp"
 #include "utilities/Replicate.hpp"
+#include "utilities/Lathe.hpp"
 namespace planetX
 {
 //class declaration
-
+     class PlanetX
+     {
+          public:
+               void draw();
+     };
 
 	class MyVirtualWorld
 	{
 		public:
+          Mesh *deer;
+          Loft *loth;
+          Replicate *replicate;
+          Extrusion *extrude;
+          Lathe *lathe;
+          PlanetX themeParkX;
 
 
 		long int timeold, timenew, elapseTime;
 
 		void draw()
 		{
-
-
+               themeParkX.draw();
 		}
 
 		void tickTime()

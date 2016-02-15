@@ -23,7 +23,7 @@ std::vector<vec3> generateSpline(float start, float finish, int segments,
                                  std::function<float(float)> xFunc = [](float x)->float { return x; },
                                  std::function<float(float)> yFunc = [](float y)->float { return 0; });
 
-std::vector<vec3> getCircle(float radius, int segments, float start = 0, float finish = 6.2831853);
+std::vector<vec3> getCircle(float radius, int segments, float y = 0, float start = 0, float finish = 6.2831853);
 
 template<typename T>
 float dot(const T &a, const T &b)

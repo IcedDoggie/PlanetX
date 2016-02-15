@@ -11,9 +11,19 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option projectIncludeDirsRelation="2" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="dependencies/glut/include" />
+					<Add directory="utilities" />
 				</Compiler>
+				<Linker>
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="glut32" />
+					<Add directory="dependencies/glut/lib" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/planetX" prefix_auto="1" extension_auto="1" />
@@ -32,7 +42,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="CGLabmain.cpp" />
+		<Unit filename="CGLabmain.hpp" />
+		<Unit filename="planetX.cpp" />
+		<Unit filename="planetX.hpp" />
+		<Unit filename="utilities/Drawable.hpp" />
+		<Unit filename="utilities/Extrusion.cpp" />
+		<Unit filename="utilities/Extrusion.hpp" />
+		<Unit filename="utilities/Lathe.cpp" />
+		<Unit filename="utilities/Lathe.hpp" />
+		<Unit filename="utilities/Loft.cpp" />
+		<Unit filename="utilities/Loft.hpp" />
+		<Unit filename="utilities/Mesh.cpp" />
+		<Unit filename="utilities/Mesh.hpp" />
+		<Unit filename="utilities/ObjReader.cpp" />
+		<Unit filename="utilities/ObjReader.hpp" />
+		<Unit filename="utilities/Replicate.cpp" />
+		<Unit filename="utilities/Replicate.hpp" />
+		<Unit filename="utilities/Transformable.cpp" />
+		<Unit filename="utilities/Transformable.hpp" />
+		<Unit filename="utilities/VecMatMath.cpp" />
+		<Unit filename="utilities/VecMatMath.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

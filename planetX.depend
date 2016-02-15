@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1455466063 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglabmain.cpp
+1455473275 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglabmain.cpp
 	"CGLabxx.hpp"
 	<cstdlib>
 	<iostream>
 	<iomanip>
 	<cmath>
+	<GLUT/glut.h>
 	<GL/glut.h>
 	"CGLabmain.hpp"
 	"planetX.hpp"
@@ -15,14 +16,15 @@
 	<iostream>
 	<GL/glut.h>
 
-1455472391 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1455554178 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"utilities/Mesh.hpp"
 	"utilities/Extrusion.hpp"
 	"utilities/Loft.hpp"
 	"utilities/Replicate.hpp"
+	"utilities/Lathe.hpp"
 
-1455472966 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1455554148 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	<cmath>
@@ -32,6 +34,7 @@
 	"utilities/Extrusion.hpp"
 	"utilities/Loft.hpp"
 	"utilities/Replicate.hpp"
+	"utilities/Lathe.hpp"
 
 1452589248 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\mesh.hpp
 	"VecMatMath.hpp"
@@ -42,7 +45,7 @@
 	<OpenGL/gl.h>
 	<GL/gl.h>
 
-1452247374 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\vecmatmath.hpp
+1455540656 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\vecmatmath.hpp
 	<cmath>
 	<algorithm>
 	<functional>
@@ -115,8 +118,17 @@
 1452247374 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\transformable.cpp
 	"Transformable.hpp"
 
-1452579242 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\vecmatmath.cpp
+1455540656 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\vecmatmath.cpp
 	"VecMatMath.hpp"
 	<cmath>
 	<cassert>
+
+1455540656 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\lathe.hpp
+	"VecMatMath.hpp"
+	"Drawable.hpp"
+	<vector>
+
+1455540656 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\utilities\lathe.cpp
+	"Lathe.hpp"
+	"GL/gl.h"
 
