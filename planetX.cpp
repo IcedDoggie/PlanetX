@@ -44,8 +44,6 @@ void PlanetX::tickTime(long int elapseTime)
           //posy += elapseTimeInSec * sin(i*(3.142/180));
      }
 
-
-
 }
 
 void PlanetX::draw()
@@ -153,3 +151,10 @@ void PlanetX::drawTrain()
 
 }
 //class definition / implementation
+void PlanetX::drawSpaceRide()
+{
+     glPushMatrix();
+          glTranslatef(0.0f,14.0f,-1.0f);
+
+     glPopMatrix();
+}

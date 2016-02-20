@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1455473275 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglabmain.cpp
+1456003888 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglabmain.cpp
 	"CGLabxx.hpp"
 	<cstdlib>
 	<iostream>
@@ -16,7 +16,7 @@
 	<iostream>
 	<GL/glut.h>
 
-1455999960 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1456003440 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
@@ -28,7 +28,7 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1455999197 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1456003336 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"

@@ -27,7 +27,9 @@ namespace planetX
                void draw();
                void drawRails();
                void drawTrain();
+               void drawSpaceRide();
                void tickTime(long int elapseTime);
+
 
 
           private:
@@ -50,6 +52,9 @@ namespace planetX
           Lathe *lathe;
           PlanetX themeParkX;
           long int timeold,timenew,elapseTime;
+          vector<vec3> pts, ptsTransformed,points3d;
+          vector<vec2> points;
+
 
 
           MyVirtualWorld()
@@ -114,6 +119,7 @@ namespace planetX
                themeParkX.draw();
                themeParkX.drawRails();
                themeParkX.drawTrain();
+               replicate->draw();
 		}
 
 		void tickTime()
@@ -132,6 +138,34 @@ namespace planetX
 		{
 		     setupTextures();
 			timeold = glutGet(GLUT_ELAPSED_TIME);
+			/// initializing variables for spline creation
+               points3d =
+               {
+                {{ -4.0f, -5.0f,5.0f }},
+                {{  4.0f,  5.0f,5.0f }},
+                {{  8.0f,  7.0f,5.0f }},
+                {{  12.0f,  5.0f,5.0f }},
+                {{  16.0f, -5.0f,5.0f }},
+                {{  20.0f, -7.0f,5.0f }}
+               };
+
+                 auto circle = getCircle(2, 10);
+                 for (auto &v : circle) points.push_back({{ v[0], v[2] }});
+
+                 spring:
+                 points3d = generateSpline(-50, 50, 50,
+                                           [](float z)->float { return sin(z/2.0) * 15; },
+                                           [](float x)->float { return cos(x/2.0) * 15; },
+                                           [](float y)->float { return y; });
+
+
+                 deer = new Mesh("data/deer.obj");
+                 deer->setFlatColor({{.8, .2, .8}});
+                 deer->setTranslateY(-5.5f);
+                 deer->setRotateZ(-90);
+                 deer->setScale(0.5f);
+                replicate = new Replicate(points3d,deer);
+
 		}
 
 		private:
