@@ -9,6 +9,7 @@ Objective: Lab05 on Points & Lines
 #include "planetX.hpp"
 #include "bezier.hpp"
 #include "cubeShaper.hpp"
+#include "CGimageloader.hpp"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
@@ -26,7 +27,9 @@ PlanetX::PlanetX()
 //     vely = 10.0f;
 //     velz = 0.0f;
      roty = 0.0f;
+
 }
+
 
 void PlanetX::tickTime(long int elapseTime)
 {

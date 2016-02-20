@@ -16,10 +16,11 @@
 	<iostream>
 	<GL/glut.h>
 
-1455995028 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1455999960 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
+	"CGimageloader.hpp"
 	<cmath>
 	"utilities/Mesh.hpp"
 	"utilities/Extrusion.hpp"
@@ -27,11 +28,12 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1455997021 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1455999197 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
+	"CGimageloader.hpp"
 	<cmath>
 	<cstdlib>
 	<ctime>
@@ -151,4 +153,27 @@
 1455987404 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cubeshaper.hpp
 	<iostream>
 	"CGLabmain.hpp"
+
+1455998166 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglab13utils\cgimageloader.hpp
+	<string>
+	"jpeglib.h"
+	<setjmp.h>
+
+1116156868 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglab13utils\jpeglib.h
+	"jconfig.h"
+	"jmorecfg.h"
+	"jpegint.h"
+	"jerror.h"
+
+1116084264 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglab13utils\jconfig.h
+	<windows.h>
+
+1116083860 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglab13utils\jmorecfg.h
+
+1160249066 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cglab13utils\cgimageloader.cpp
+	<cstdio>
+	<cstdlib>
+	<GL/glut.h>
+	<iostream>
+	"CGimageloader.hpp"
 

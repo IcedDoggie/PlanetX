@@ -184,6 +184,8 @@ void mySpecialFunc(int key, int x, int y)
                              glDisable(GL_LIGHTING);
                              else  glEnable(GL_LIGHTING);
                           break;
+     case GLUT_KEY_F4 : myvirtualworld.toggleTextures();
+                         break;
  }
  glutPostRedisplay();
 }
@@ -375,6 +377,9 @@ void myWelcome()
  cout << "|   F1                      => toggle shading / wire-frame mode |\n";
  cout << "|   F2                      => toggle rendering of axes         |\n";
  cout << "|   F3                      => toggle lighting on / off         |\n";
+ cout << "| ADDITIONAL KEYS FOR LAB12 :                                   |\n";
+ cout << "| F4 => toggle textures on / off                                |\n";
+ cout << "+--------------------------------------------------------------+\n";
  cout << "|                                                               |\n";
  cout << "| Mouse (Left Drag or Right Drag) => rotate world               |\n";
  cout << "|                                                               |\n";
