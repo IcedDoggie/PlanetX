@@ -22,18 +22,26 @@ using namespace planetX;
 
 PlanetX::PlanetX()
 {
-     velx = 40.0f;
-     vely = 0.0f;
-     velz = 30.0f;
-
+//     velx = 1.0f;
+//     vely = 10.0f;
+//     velz = 0.0f;
+     roty = 0.0f;
 }
 
 void PlanetX::tickTime(long int elapseTime)
 {
-     float elapseTimeInSec = elapseTime / 1000.0f;
+     posx = 0.0f;
+     float elapseTimeInSec = elapseTime / 500.0f;
      posx += elapseTimeInSec * velx;
      posy += elapseTimeInSec * vely;
-     posz += elapseTimeInSec * velz;
+     for(int i = 0; i<360; i=i+100)
+     {
+          posx +=   elapseTimeInSec * cos(i*(3.142/180));
+          roty += sin(i*(3.142/180));
+          //posy += elapseTimeInSec * sin(i*(3.142/180));
+     }
+
+
 
 }
 
@@ -102,6 +110,7 @@ void PlanetX::drawTrain()
 {
      glPushMatrix();
           glTranslatef(posx,posy,posz);
+          glRotatef(roty,0.0f,0.0f,1.0f);
           ///head of train
           glColor3f(0.73f,0.16f,0.96f);
           glPushMatrix();

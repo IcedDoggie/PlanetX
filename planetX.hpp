@@ -29,6 +29,7 @@ namespace planetX
           private:
                GLfloat velx,vely,velz;
                GLfloat posx,posy,posz;
+               GLfloat roty;
      };
 
 
