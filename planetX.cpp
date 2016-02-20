@@ -31,10 +31,10 @@ PlanetX::PlanetX()
 void PlanetX::tickTime(long int elapseTime)
 {
      posx = 0.0f;
-     float elapseTimeInSec = elapseTime / 500.0f;
+     float elapseTimeInSec = elapseTime / 1000.0f;
      posx += elapseTimeInSec * velx;
      posy += elapseTimeInSec * vely;
-     for(int i = 0; i<360; i=i+100)
+     for(int i = 0; i<360; i = i+50)
      {
           posx +=   elapseTimeInSec * cos(i*(3.142/180));
           roty += sin(i*(3.142/180));
