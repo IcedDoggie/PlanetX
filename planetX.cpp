@@ -20,6 +20,23 @@ Objective: Lab05 on Points & Lines
 
 using namespace planetX;
 
+PlanetX::PlanetX()
+{
+     velx = 40.0f;
+     vely = 0.0f;
+     velz = 30.0f;
+
+}
+
+void PlanetX::tickTime(long int elapseTime)
+{
+     float elapseTimeInSec = elapseTime / 1000.0f;
+     posx += elapseTimeInSec * velx;
+     posy += elapseTimeInSec * vely;
+     posz += elapseTimeInSec * velz;
+
+}
+
 void PlanetX::draw()
 {
      //Quadric object
@@ -83,40 +100,43 @@ void PlanetX::drawRails()
 
 void PlanetX::drawTrain()
 {
-     ///head of train
-     glColor3f(0.73f,0.16f,0.96f);
      glPushMatrix();
-          glTranslatef(0.0f,15.0f,0.0f);
-          CubeShaper cubeshaper;
-          cubeshaper.initializer(4,1.5f,3);
-          cubeshaper.draw();
-     glPopMatrix();
-     ///top of head of train
-     glColor3f(0.52f,0.37f,0.26f);
-     GLUquadricObj *pObj;
-     pObj = gluNewQuadric();
-     gluQuadricNormals(pObj, GLU_SMOOTH);
-     glDisable(GL_CULL_FACE);
-          glPushMatrix();
-               glTranslatef(0.0f,18.5f,0.0f);
-               glRotatef(90.0,1.0f,0.0f,0.0f);
-               gluCylinder(pObj,1,1,2,26,13);
-          glPopMatrix();
-     glEnable(GL_CULL_FACE);
-
-     ///2nd compartment
-     glColor3f(0.35f,0.16f,0.14f);
-     glPushMatrix();
-          glTranslatef(-2.0f,15.0f,0.0f);
-          CubeShaper cubeshaperLinker;
-          cubeshaperLinker.initializer(1,1,1);
-          glRotatef(90.0,0.0f,0.0f,1.0f);
-          cubeshaperLinker.draw();
-     glPopMatrix();
-     glPushMatrix();
+          glTranslatef(posx,posy,posz);
+          ///head of train
           glColor3f(0.73f,0.16f,0.96f);
-          glTranslatef(-5.0f,15.0f,0.0f);
-          cubeshaper.draw();
+          glPushMatrix();
+               glTranslatef(0.0f,15.0f,0.0f);
+               CubeShaper cubeshaper;
+               cubeshaper.initializer(4,1.5f,3);
+               cubeshaper.draw();
+          glPopMatrix();
+          ///top of head of train
+          glColor3f(0.52f,0.37f,0.26f);
+          GLUquadricObj *pObj;
+          pObj = gluNewQuadric();
+          gluQuadricNormals(pObj, GLU_SMOOTH);
+          glDisable(GL_CULL_FACE);
+               glPushMatrix();
+                    glTranslatef(0.0f,18.5f,0.0f);
+                    glRotatef(90.0,1.0f,0.0f,0.0f);
+                    gluCylinder(pObj,1,1,2,26,13);
+               glPopMatrix();
+          glEnable(GL_CULL_FACE);
+
+          ///2nd compartment
+          glColor3f(0.35f,0.16f,0.14f);
+          glPushMatrix();
+               glTranslatef(-2.0f,15.0f,0.0f);
+               CubeShaper cubeshaperLinker;
+               cubeshaperLinker.initializer(1,1,1);
+               glRotatef(90.0,0.0f,0.0f,1.0f);
+               cubeshaperLinker.draw();
+          glPopMatrix();
+          glPushMatrix();
+               glColor3f(0.73f,0.16f,0.96f);
+               glTranslatef(-5.0f,15.0f,0.0f);
+               cubeshaper.draw();
+          glPopMatrix();
      glPopMatrix();
 
 }

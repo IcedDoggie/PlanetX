@@ -21,9 +21,14 @@ namespace planetX
      class PlanetX
      {
           public:
+               PlanetX();
                void draw();
                void drawRails();
                void drawTrain();
+               void tickTime(long int elapseTime);
+          private:
+               GLfloat velx,vely,velz;
+               GLfloat posx,posy,posz;
      };
 
 
@@ -37,10 +42,7 @@ namespace planetX
           Extrusion *extrude;
           Lathe *lathe;
           PlanetX themeParkX;
-
-
-
-		long int timeold, timenew, elapseTime;
+          long int timeold,timenew,elapseTime;
 
 		void draw()
 		{
@@ -54,6 +56,8 @@ namespace planetX
 			timenew = glutGet(GLUT_ELAPSED_TIME);
 			elapseTime = timenew - timeold;
 			timeold = timenew;
+
+			themeParkX.tickTime(elapseTime);
 
 		}
 		//for any one-time only initialization of the
