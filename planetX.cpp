@@ -8,6 +8,7 @@ Objective: Lab05 on Points & Lines
 
 #include "planetX.hpp"
 #include "bezier.hpp"
+#include "cubeShaper.hpp"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
@@ -79,4 +80,30 @@ void PlanetX::drawRails()
 
 }
 
+
+void PlanetX::drawTrain()
+{
+     ///head of train
+     glColor3f(0.73f,0.16f,0.96f);
+     glPushMatrix();
+          glTranslatef(0.0f,15.0f,0.0f);
+          CubeShaper cubeshaper;
+          cubeshaper.initializer(4,2,3);
+          cubeshaper.draw();
+     glPopMatrix();
+     ///top of head of train
+     glColor3f(0.52f,0.37f,0.26f);
+     GLUquadricObj *pObj;
+     pObj = gluNewQuadric();
+     gluQuadricNormals(pObj, GLU_SMOOTH);
+     glDisable(GL_CULL_FACE);
+          glPushMatrix();
+               glTranslatef(0.0f,18.5f,0.0f);
+               glRotatef(90.0,1.0f,0.0f,0.0f);
+               gluCylinder(pObj,1,1,2,26,13);
+          glPopMatrix();
+     glEnable(GL_CULL_FACE);
+
+
+}
 //class definition / implementation

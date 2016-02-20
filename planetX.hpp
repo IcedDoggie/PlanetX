@@ -8,6 +8,7 @@ Objective: Header File for Lab05 on Points & Lines
 #define planetX_HPP
 #include "CGLabmain.hpp"
 #include "bezier.hpp"
+#include "cubeShaper.hpp"
 #include <cmath>
 #include "utilities/Mesh.hpp"
 #include "utilities/Extrusion.hpp"
@@ -22,6 +23,7 @@ namespace planetX
           public:
                void draw();
                void drawRails();
+               void drawTrain();
      };
 
 
@@ -44,6 +46,7 @@ namespace planetX
 		{
                themeParkX.draw();
                themeParkX.drawRails();
+               themeParkX.drawTrain();
 		}
 
 		void tickTime()
