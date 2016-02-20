@@ -7,6 +7,7 @@ Objective: Header File for Lab05 on Points & Lines
 #ifndef planetX_HPP
 #define planetX_HPP
 #include "CGLabmain.hpp"
+#include "bezier.hpp"
 #include "utilities/Mesh.hpp"
 #include "utilities/Extrusion.hpp"
 #include "utilities/Loft.hpp"
@@ -22,18 +23,7 @@ namespace planetX
                void drawRails();
      };
 
-     class MyBezierLine
-     {
-          public:
-               MyBezierLine(){}
-               ~MyBezierLine(){}
-               void setup(const GLfloat* controlPoints, GLint uOrder);
-               void draw(GLenum draw_mode = GL_LINE, GLint ures = 100);
-               void drawControlPoints();
-          private:
-               GLint uorder;
-               const GLfloat* controlpoints;
-     };
+
 
 	class MyVirtualWorld
 	{
@@ -44,7 +34,7 @@ namespace planetX
           Extrusion *extrude;
           Lathe *lathe;
           PlanetX themeParkX;
-
+          MyBezierLine mybezierline;
 
 
 		long int timeold, timenew, elapseTime;

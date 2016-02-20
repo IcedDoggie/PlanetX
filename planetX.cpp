@@ -41,7 +41,7 @@ void PlanetX::drawRails()
                glLineWidth(3.0);
                glBegin(GL_LINES);
                     glColor3f(0.8f, 0.498039f,0.196078f);
-                    glVertex3f();
+
                glEnd();
           glEnable(GL_CULL_FACE);
      glPopMatrix();
