@@ -28,7 +28,21 @@ void PlanetX::draw()
      glPushMatrix();
           glDisable(GL_CULL_FACE);
                glColor3f(1*0.5f,1*0.5f,1*0.5f);
-               gluSphere(pObj, 4.0f, 24, 12);
+               gluSphere(pObj, 15.0f, 24, 12);
+          glEnable(GL_CULL_FACE);
+     glPopMatrix();
+
+}
+
+void PlanetX::drawRails()
+{
+     glPushMatrix();
+          glDisable(GL_CULL_FACE);
+               glLineWidth(3.0);
+               glBegin(GL_LINES);
+                    glColor3f(0.8f, 0.498039f,0.196078f);
+                    glVertex3f();
+               glEnd();
           glEnable(GL_CULL_FACE);
      glPopMatrix();
 }

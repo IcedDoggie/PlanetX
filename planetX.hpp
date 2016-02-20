@@ -19,6 +19,20 @@ namespace planetX
      {
           public:
                void draw();
+               void drawRails();
+     };
+
+     class MyBezierLine
+     {
+          public:
+               MyBezierLine(){}
+               ~MyBezierLine(){}
+               void setup(const GLfloat* controlPoints, GLint uOrder);
+               void draw(GLenum draw_mode = GL_LINE, GLint ures = 100);
+               void drawControlPoints();
+          private:
+               GLint uorder;
+               const GLfloat* controlpoints;
      };
 
 	class MyVirtualWorld
@@ -30,6 +44,7 @@ namespace planetX
           Extrusion *extrude;
           Lathe *lathe;
           PlanetX themeParkX;
+
 
 
 		long int timeold, timenew, elapseTime;
