@@ -88,7 +88,7 @@ void PlanetX::drawTrain()
      glPushMatrix();
           glTranslatef(0.0f,15.0f,0.0f);
           CubeShaper cubeshaper;
-          cubeshaper.initializer(4,2,3);
+          cubeshaper.initializer(4,1.5f,3);
           cubeshaper.draw();
      glPopMatrix();
      ///top of head of train
@@ -104,6 +104,20 @@ void PlanetX::drawTrain()
           glPopMatrix();
      glEnable(GL_CULL_FACE);
 
+     ///2nd compartment
+     glColor3f(0.35f,0.16f,0.14f);
+     glPushMatrix();
+          glTranslatef(-2.0f,15.0f,0.0f);
+          CubeShaper cubeshaperLinker;
+          cubeshaperLinker.initializer(1,1,1);
+          glRotatef(90.0,0.0f,0.0f,1.0f);
+          cubeshaperLinker.draw();
+     glPopMatrix();
+     glPushMatrix();
+          glColor3f(0.73f,0.16f,0.96f);
+          glTranslatef(-5.0f,15.0f,0.0f);
+          cubeshaper.draw();
+     glPopMatrix();
 
 }
 //class definition / implementation
