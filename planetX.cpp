@@ -7,6 +7,7 @@ Objective: Lab05 on Points & Lines
 #include <GL/glut.h>
 
 #include "planetX.hpp"
+#include "bezier.hpp"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
@@ -36,15 +37,38 @@ void PlanetX::draw()
 
 void PlanetX::drawRails()
 {
-     glPushMatrix();
-          glDisable(GL_CULL_FACE);
-               glLineWidth(3.0);
-               glBegin(GL_LINES);
-                    glColor3f(0.8f, 0.498039f,0.196078f);
-
+     glDisable(GL_CULL_FACE);
+          ///Left Rails
+          glLineWidth(9.0);
+          glColor3f(0.8f, 0.498039f,0.196078f);
+          float radius = 15.0f;
+          glPushMatrix();
+               glTranslatef(0.0f,0.0f,-2.0f);
+               glBegin(GL_LINE_LOOP);
+               for(int i = 0; i<360;i++)
+               {
+                    float degree = i*(3.142/180);
+                    glVertex2f(cos(degree)*radius,sin(degree)*radius);
+               }
                glEnd();
-          glEnable(GL_CULL_FACE);
-     glPopMatrix();
+          glPopMatrix();
+          ///Right Rails
+          glPushMatrix();
+               glTranslatef(0.0f,0.0f,2.0f);
+               glBegin(GL_LINE_LOOP);
+               for(int i = 0; i<360;i++)
+               {
+                    float degree = i*(3.142/180);
+                    glVertex2f(cos(degree)*radius,sin(degree)*radius);
+               }
+               glEnd();
+          glPopMatrix();
+
+
+
+
+     glEnable(GL_CULL_FACE);
+
 }
 
 //class definition / implementation

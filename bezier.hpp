@@ -2,6 +2,7 @@
 #define MyBezierLine_HPP
 #include "CGLabmain.hpp"
 
+
 using namespace std;
 
 class MyBezierLine
