@@ -63,9 +63,17 @@ void PlanetX::drawRails()
                }
                glEnd();
           glPopMatrix();
-
-
-
+          ///Middle Rails
+          glPushMatrix();
+               glBegin(GL_LINES);
+               for(int i = 0; i<360;i=i+30)
+               {
+                    float degree = i*(3.142/180);
+                    glVertex3f(cos(degree)*radius,sin(degree)*radius,-2.0f);
+                    glVertex3f(cos(degree)*radius,sin(degree)*radius,2.0f);
+               }
+               glEnd();
+          glPopMatrix();
 
      glEnable(GL_CULL_FACE);
 
