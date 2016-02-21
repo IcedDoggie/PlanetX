@@ -16,11 +16,12 @@
 	<iostream>
 	<GL/glut.h>
 
-1456003440 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1456088877 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
 	"CGimageloader.hpp"
+	"sweep.hpp"
 	<cmath>
 	"utilities/Mesh.hpp"
 	"utilities/Extrusion.hpp"
@@ -28,12 +29,13 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1456003336 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1456088706 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
 	"CGimageloader.hpp"
+	"sweep.hpp"
 	<cmath>
 	<cstdlib>
 	<ctime>
@@ -176,4 +178,13 @@
 	<GL/glut.h>
 	<iostream>
 	"CGimageloader.hpp"
+
+1456088173 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\sweep.cpp
+	"sweep.hpp"
+	<iostream>
+	<cmath>
+
+1456087925 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\sweep.hpp
+	<iostream>
+	"CGLabmain.hpp"
 

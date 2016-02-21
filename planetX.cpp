@@ -10,6 +10,7 @@ Objective: Lab05 on Points & Lines
 #include "bezier.hpp"
 #include "cubeShaper.hpp"
 #include "CGimageloader.hpp"
+#include "sweep.hpp"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
@@ -56,7 +57,7 @@ void PlanetX::draw()
      glPushMatrix();
           glDisable(GL_CULL_FACE);
                glColor3f(1*0.5f,1*0.5f,1*0.5f);
-               gluSphere(pObj, 15.0f, 24, 12);
+               gluSphere(pObj, 15.0f, 24,12);
           glEnable(GL_CULL_FACE);
      glPopMatrix();
 
@@ -157,4 +158,20 @@ void PlanetX::drawSpaceRide()
           glTranslatef(0.0f,14.0f,-1.0f);
 
      glPopMatrix();
+}
+
+void PlanetX::drawCups()
+{
+     MySweepSurface mysweepsurface;
+
+     glColor3f(1.0f,1.0f,1.0f);
+     mysweepsurface.draw();
+     glPushMatrix();
+
+     glPopMatrix();
+}
+
+void PlanetX::drawEyesOnVader()
+{
+
 }

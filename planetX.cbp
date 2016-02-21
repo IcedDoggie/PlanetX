@@ -17,11 +17,13 @@
 					<Add option="-g" />
 					<Add directory="dependencies/glut/include" />
 					<Add directory="utilities" />
+					<Add directory="CGLab13Utils" />
 				</Compiler>
 				<Linker>
 					<Add library="opengl32" />
 					<Add library="glu32" />
 					<Add library="glut32" />
+					<Add library="E:\Documents\MMU Studies\Degree 2nd Year\Second Sem\CG\Assignment\planetX\libjpeg.dll.a" />
 					<Add directory="dependencies/glut/lib" />
 				</Linker>
 			</Target>
@@ -42,6 +44,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CGLab13Utils/CGimageloader.cpp" />
+		<Unit filename="CGLab13Utils/CGimageloader.hpp" />
 		<Unit filename="CGLabmain.cpp" />
 		<Unit filename="CGLabmain.hpp" />
 		<Unit filename="bezier.cpp" />
