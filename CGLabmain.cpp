@@ -386,6 +386,9 @@ void myWelcome()
  cout << "|   F3                      => toggle lighting on / off         |\n";
  cout << "| ADDITIONAL KEYS FOR LAB12 :                                   |\n";
  cout << "| F4 => toggle textures on / off                                |\n";
+cout << "| ADDITIONAL KEYS FOR ASSIGNMENT:                               |\n";
+cout << "| F5 => toggle Counter-CLOCKWISE spinning cups                  |\n";
+cout << "| F6 => toggle CLOCKWISE spinning cups                          |\n";
  cout << "+--------------------------------------------------------------+\n";
  cout << "|                                                               |\n";
  cout << "| Mouse (Left Drag or Right Drag) => rotate world               |\n";
