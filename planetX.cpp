@@ -175,11 +175,39 @@ void PlanetX::drawCups()
      };
      sweep.setup(profilepoints, 6, 0, 360, 1);
 
-     glColor3f(1.0f,1.0f,1.0f);
-     sweep.draw();
-     glPushMatrix();
+     ///some credentials
+     float rotateDegree;
+     float radius = 13.0f;
 
+     glColor3f(1.0f,1.0f,1.0f);
+     glPushMatrix();
+          glRotatef(90.0f,1.0f,0.0f,0.0f);
+          glTranslatef(0.0f,radius+sin(90*3.142/180),0.0f);
+          sweep.draw();
      glPopMatrix();
+     glPushMatrix();
+          glRotatef(60.0f,1.0f,0.0f,0.0f);
+          glTranslatef(0.0f,radius+sin(90*3.142/180),0.0f);
+          sweep.draw();
+     glPopMatrix();
+     glPushMatrix();
+          glRotatef(120.0f,1.0f,0.0f,0.0f);
+          glTranslatef(0.0f,radius+sin(120*3.142/180),0.0f);
+          sweep.draw();
+     glPopMatrix();
+     glPushMatrix();
+          glRotatef(90.0f,1.0f,0.0f,0.0f);
+          glRotatef(45.0f,0.0f,0.0f,1.0f);
+          glTranslatef(0.0f,radius+sin(45*3.142/180),0.0f);
+          sweep.draw();
+     glPopMatrix();
+     glPushMatrix();
+          glRotatef(90.0f,1.0f,0.0f,0.0f);
+          glRotatef(-45.0f,0.0f,0.0f,1.0f);
+          glTranslatef(0.0f,radius+sin(135*3.142/180),0.0f);
+          sweep.draw();
+     glPopMatrix();
+
 }
 
 void PlanetX::drawEyesOnVader()

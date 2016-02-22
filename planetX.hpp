@@ -57,7 +57,7 @@ namespace planetX
           Extrusion *extrude;
           Lathe *lathe;
           PlanetX themeParkX;
-          MySweepSurface mysweepsurface;
+          //MySweepSurface mysweepsurface;
           long int timeold,timenew,elapseTime;
           vector<vec3> pts, ptsTransformed,points3d;
           vector<vec2> points;
@@ -127,21 +127,7 @@ namespace planetX
                themeParkX.drawRails();
                themeParkX.drawTrain();
                themeParkX.drawCups();
-//               glColor3f(1.0f,1.0f,1.0f);
-//               /// Cups Drawing
-//               glPushMatrix();
-//                    glRotatef(90.0f,1.0f,0.0f,0.0f);
-//                    glTranslatef(0.0f,13.0f,-1.0f);
-//                    mysweepsurface.draw();
-//               glPopMatrix();
-//               glPushMatrix();
-//                    glRotatef(60.0f,1.0f,0.0f,0.0f);
-//                    glTranslatef(0.0f,12.5f,-1.0f);
-//                    mysweepsurface.draw();
-//               glPopMatrix();
 
-
-               ///Cups Drawing ends
                //replicate->draw();
 		}
 
