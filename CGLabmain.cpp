@@ -186,8 +186,10 @@ void mySpecialFunc(int key, int x, int y)
                           break;
      case GLUT_KEY_F4 : myvirtualworld.toggleTextures();
                          break;
+                         ///cups go in counter clockwise
      case GLUT_KEY_F5 : myvirtualworld.toggleDir= false;
                          break;
+                         ///cups go in clockwise
      case GLUT_KEY_F6 : myvirtualworld.toggleDir= true;
                          break;
 
