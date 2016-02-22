@@ -111,6 +111,7 @@ void PlanetX::drawRails()
 
 void PlanetX::drawTrain()
 {
+
      glPushMatrix();
           //glTranslatef(posx,posy,posz);
           glRotatef(roty,0.0f,0.0f,1.0f);
@@ -224,15 +225,3 @@ void PlanetX::drawCups(bool toggleDir)
 
 }
 
-void PlanetX::drawWheel()
-{
-     FerrisWheel ferriswheel;
-     glPushMatrix();
-//          glTranslatef(posx,posy,posz);
- //         glRotatef(roty,0.0f,0.0f,1.0f);
-          glPushMatrix();
-               glTranslatef(0.0f,0.0f,-40.0f);
-               ferriswheel.draw();
-          glPopMatrix();
-     glPopMatrix();
-}

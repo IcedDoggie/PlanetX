@@ -10,21 +10,17 @@ Contacts #2 : PhoneNoOfStud2 EMailOfStud2
 #ifndef FERRISWHEEL_HPP_INCLUDED
 #define FERRISWHEEL_HPP_INCLUDED
 
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
+#include "CGLabmain.hpp"
+#include "object.hpp"
+#include "alien.hpp"
 
-
-using namespace std;
-
-class FerrisWheel
+class FerrisWheel : public Object
 {
 public:
     FerrisWheel();
     ~FerrisWheel();
     void draw();
     void setRingColour(GLfloat r, GLfloat g, GLfloat b);
-    void tickTime(long int elapseTime);
 private:
     GLfloat bodyCol[3];
     GLfloat ringCol[3];
@@ -33,9 +29,6 @@ private:
     void drawCarriage();
     void setCarriageColour(GLfloat r, GLfloat g, GLfloat b);
     void drawStand(float wheelRadius);
-     GLfloat velx,vely,velz;
-     GLfloat posx,posy,posz;
-     GLfloat roty;
 };
 
 #endif // FERRISWHEEL_HPP_INCLUDED

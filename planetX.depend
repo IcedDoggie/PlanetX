@@ -16,7 +16,7 @@
 	<iostream>
 	<GL/glut.h>
 
-1456159892 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1456162172 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
@@ -33,7 +33,7 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1456158565 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1456162153 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"
@@ -193,19 +193,14 @@
 	<iostream>
 	"CGLabmain.hpp"
 
-1456159881 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.cpp
+1452692428 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.cpp
 	<GL/glut.h>
-	<cmath>
-	<ctime>
-	<cstdlib>
-	"CGLabmain.hpp"
 	"ferriswheel.hpp"
-	"alien.hpp"
 
-1456157060 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.hpp
-	<iostream>
-	<ctime>
-	<cstdlib>
+1456162979 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.hpp
+	"CGLabmain.hpp"
+	"object.hpp"
+	"alien.hpp"
 
 1456152645 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\alien.hpp
 	<iostream>
@@ -219,4 +214,7 @@
 	<vector>
 	<cmath>
 	"bezier.hpp"
+
+1456162972 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\object.hpp
+	"CGLabmain.hpp"
 

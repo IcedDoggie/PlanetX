@@ -49,13 +49,11 @@
 		<Unit filename="CGLabmain.cpp" />
 		<Unit filename="CGLabmain.hpp" />
 		<Unit filename="alien.cpp" />
-		<Unit filename="bezier.cpp" />
-		<Unit filename="bezier.hpp" />
+		<Unit filename="alien.hpp" />
 		<Unit filename="cubeShaper.cpp" />
 		<Unit filename="cubeShaper.hpp" />
 		<Unit filename="ferriswheel.cpp" />
 		<Unit filename="ferriswheel.hpp" />
-		<Unit filename="misc.hpp" />
 		<Unit filename="object.hpp" />
 		<Unit filename="planetX.cpp" />
 		<Unit filename="planetX.hpp" />

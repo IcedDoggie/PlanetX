@@ -10,7 +10,7 @@ Contacts #2 : PhoneNoOfStud2 EMailOfStud2
 #ifndef OBJECT_HPP_INCLUDED
 #define OBJECT_HPP_INCLUDED
 
-#include "misc.hpp"
+#include "CGLabmain.hpp"
 
 class Object
 {

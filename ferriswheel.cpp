@@ -8,12 +8,8 @@ Contacts #2 : PhoneNoOfStud2 EMailOfStud2
 ********************************************/
 
 #include <GL/glut.h>
-#include <cmath>
-#include <ctime>
-#include <cstdlib>
-#include "CGLabmain.hpp"
+
 #include "ferriswheel.hpp"
-#include "alien.hpp"
 
 FerrisWheel::FerrisWheel()
 {
@@ -29,8 +25,6 @@ FerrisWheel::FerrisWheel()
     ringCol[0] = 1.0f;
     ringCol[1] = 1.0f;
     ringCol[2] = 1.0f;
-    roty = 0.1f;
-
 }
 
 FerrisWheel::~FerrisWheel()
@@ -39,24 +33,8 @@ FerrisWheel::~FerrisWheel()
     gluDeleteQuadric(pObj);
 }
 
-void FerrisWheel::tickTime(long int elapseTime)
-{
-
-     float elapseTimeInSec = elapseTime / 1000.0f;
-     posx += elapseTimeInSec * velx;
-     posy += elapseTimeInSec * vely;
-     for(int i = 0; i<360; i++)
-     {
-          posx +=   elapseTimeInSec * cos(i*(3.142/180));
-          roty += sin(i*(3.142/180));
-          //posy += elapseTimeInSec * sin(i*(3.142/180));
-     }
-
-}
-
 void FerrisWheel::draw()
 {
-
     glDisable(GL_CULL_FACE);
 
     int carriageNo = 10;
@@ -66,20 +44,16 @@ void FerrisWheel::draw()
     drawStand(wheelRadius);
 
     // Loop to draw rotating carriage
-
-
-              glTranslatef( 0.0f, 18.8f + wheelRadius, 0.0f);
-              for(int i = 0; i < carriageNo; i++)
-              {
-                  glPushMatrix();
-                      glRotatef(roty, 0.0f, 0.0f, 1.0f);
-                      glTranslatef( wheelRadius*cos( i*(2*3.14159f/carriageNo) ), wheelRadius*sin( i*(2*3.14159f/carriageNo) ), 0.0f);
-                      setCarriageColour((i%2)*1.0f, ((i+1)%2)*1.0f, (i%3%2)*1.0f);
-                      drawCarriage();
-                  glPopMatrix();
-              }
-
-
+    glTranslatef( 0.0f, 18.8f + wheelRadius, 0.0f);
+    for(int i = 0; i < carriageNo; i++)
+    {
+        glPushMatrix();
+            glRotatef(rotateSpeed*timetick, 0.0f, 0.0f, 1.0f);
+            glTranslatef( wheelRadius*cos( i*(2*3.14159f/carriageNo) ), wheelRadius*sin( i*(2*3.14159f/carriageNo) ), 0.0f);
+            setCarriageColour((i%2)*1.0f, ((i+1)%2)*1.0f, (i%3%2)*1.0f);
+            drawCarriage();
+        glPopMatrix();
+    }
 
     // Draw rings
     /*glPushMatrix();
@@ -90,7 +64,6 @@ void FerrisWheel::draw()
     glPopMatrix();*/
 
     glEnable(GL_CULL_FACE);
-
 }
 
 void FerrisWheel::setCarriageColour(GLfloat r, GLfloat g, GLfloat b)
@@ -110,7 +83,7 @@ void FerrisWheel::setRingColour(GLfloat r, GLfloat g, GLfloat b)
 void FerrisWheel::drawCarriage()
 {
     glPushMatrix();
-        glRotatef(-rotateSpeed, 0.0f, 0.0f, 1.0f);
+        glRotatef(-rotateSpeed*timetick, 0.0f, 0.0f, 1.0f);
         glTranslatef( 0.0f, 2.5f, 0.0f);
 
         // Draw passengers

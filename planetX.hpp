@@ -33,7 +33,6 @@ namespace planetX
                void drawRails();
                void drawTrain();
                void drawSpaceRide();
-               void drawWheel();
                void tickTime(long int elapseTime);
                void drawCups(bool toggler);
                ///unfinished
@@ -146,10 +145,14 @@ namespace planetX
                     themeParkX.draw();
 
                glDisable(GL_TEXTURE_2D);
+               glPushMatrix();
+                    glTranslatef(0.0f,0.0f,-40.0f);
+                    wheel.draw();
+               glPopMatrix();
                themeParkX.drawRails();
                themeParkX.drawTrain();
                themeParkX.drawCups(toggleDir);
-               themeParkX.drawWheel();
+
 
                //replicate->draw();
 		}
