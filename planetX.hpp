@@ -11,6 +11,7 @@ Objective: Header File for Lab05 on Points & Lines
 #include "cubeShaper.hpp"
 #include "CGimageloader.hpp"
 #include "sweep.hpp"
+#include "ferriswheel.hpp"
 #include <cmath>
 #include "utilities/Mesh.hpp"
 #include "utilities/Extrusion.hpp"
@@ -29,10 +30,10 @@ namespace planetX
                void drawRails();
                void drawTrain();
                void drawSpaceRide();
+               void drawWheel();
                void tickTime(long int elapseTime);
                ///unfinished
                void drawCups(bool toggler);
-               void drawEyesOnVader();
                static GLfloat profilepoints[];
 
 
@@ -62,6 +63,9 @@ namespace planetX
           vector<vec3> pts, ptsTransformed,points3d;
           vector<vec2> points;
           bool toggleDir=true;
+          void setupLights();
+          void toggleLight(int lightno);
+          void drawSpotLights();
 
 
           MyVirtualWorld()
@@ -125,12 +129,15 @@ namespace planetX
 		{
 		     ///texture mapping
                glEnable(GL_TEXTURE_2D);
+                    if(textureison)
+                    {
+                         glBindTexture(GL_TEXTURE_2D,textureNumbers[0] );
+                         glEnable(GL_TEXTURE_GEN_S);
+                         glEnable(GL_TEXTURE_GEN_T);
+                         glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_OBJECT_LINEAR);
+                         glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+                    }
 
-                    glBindTexture(GL_TEXTURE_2D,textureNumbers[0] );
-                    glEnable(GL_TEXTURE_GEN_S);
-                    glEnable(GL_TEXTURE_GEN_T);
-                    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_OBJECT_LINEAR);
-                    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
                     themeParkX.draw();
 
                glDisable(GL_TEXTURE_2D);
@@ -138,6 +145,7 @@ namespace planetX
                themeParkX.drawRails();
                themeParkX.drawTrain();
                themeParkX.drawCups(toggleDir);
+               themeParkX.drawWheel();
 
                //replicate->draw();
 		}

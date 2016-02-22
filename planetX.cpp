@@ -11,6 +11,7 @@ Objective: Lab05 on Points & Lines
 #include "cubeShaper.hpp"
 #include "CGimageloader.hpp"
 #include "sweep.hpp"
+#include "ferriswheel.hpp"
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
@@ -223,7 +224,11 @@ void PlanetX::drawCups(bool toggleDir)
 
 }
 
-void PlanetX::drawEyesOnVader()
+void PlanetX::drawWheel()
 {
-
+     FerrisWheel ferriswheel;
+     glPushMatrix();
+          glTranslatef(0.0f,0.0f,-40.0f);
+          ferriswheel.draw();
+     glPopMatrix();
 }
