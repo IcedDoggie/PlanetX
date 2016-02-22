@@ -16,7 +16,7 @@
 	<iostream>
 	<GL/glut.h>
 
-1456152560 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1456159892 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
@@ -24,6 +24,8 @@
 	"sweep.hpp"
 	"ferriswheel.hpp"
 	"alien.hpp"
+	"bezier.hpp"
+	"curvepath.hpp"
 	<cmath>
 	"utilities/Mesh.hpp"
 	"utilities/Extrusion.hpp"
@@ -31,7 +33,7 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1456151908 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1456158565 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"
@@ -148,7 +150,7 @@
 	<iostream>
 	"bezier.hpp"
 
-1455965524 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\bezier.hpp
+1456153708 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\bezier.hpp
 	"CGLabmain.hpp"
 
 1455987182 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\cubeshaper.cpp
@@ -191,15 +193,19 @@
 	<iostream>
 	"CGLabmain.hpp"
 
-1456151161 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.cpp
+1456159881 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.cpp
 	<GL/glut.h>
 	<cmath>
-	"planetX.hpp"
+	<ctime>
+	<cstdlib>
 	"CGLabmain.hpp"
 	"ferriswheel.hpp"
+	"alien.hpp"
 
-1456148850 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.hpp
+1456157060 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.hpp
 	<iostream>
+	<ctime>
+	<cstdlib>
 
 1456152645 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\alien.hpp
 	<iostream>
@@ -208,4 +214,9 @@
 	<GL/glut.h>
 	<iostream>
 	"alien.hpp"
+
+1456153691 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\curvepath.hpp
+	<vector>
+	<cmath>
+	"bezier.hpp"
 

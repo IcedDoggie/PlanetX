@@ -11,6 +11,9 @@ Contacts #2 : PhoneNoOfStud2 EMailOfStud2
 #define FERRISWHEEL_HPP_INCLUDED
 
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
+
 
 using namespace std;
 
@@ -21,6 +24,7 @@ public:
     ~FerrisWheel();
     void draw();
     void setRingColour(GLfloat r, GLfloat g, GLfloat b);
+    void tickTime(long int elapseTime);
 private:
     GLfloat bodyCol[3];
     GLfloat ringCol[3];
@@ -29,6 +33,9 @@ private:
     void drawCarriage();
     void setCarriageColour(GLfloat r, GLfloat g, GLfloat b);
     void drawStand(float wheelRadius);
+     GLfloat velx,vely,velz;
+     GLfloat posx,posy,posz;
+     GLfloat roty;
 };
 
 #endif // FERRISWHEEL_HPP_INCLUDED

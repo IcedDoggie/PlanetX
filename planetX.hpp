@@ -13,6 +13,8 @@ Objective: Header File for Lab05 on Points & Lines
 #include "sweep.hpp"
 #include "ferriswheel.hpp"
 #include "alien.hpp"
+#include "bezier.hpp"
+#include "curvepath.hpp"
 #include <cmath>
 #include "utilities/Mesh.hpp"
 #include "utilities/Extrusion.hpp"
@@ -33,8 +35,9 @@ namespace planetX
                void drawSpaceRide();
                void drawWheel();
                void tickTime(long int elapseTime);
-               ///unfinished
                void drawCups(bool toggler);
+               ///unfinished
+
                static GLfloat profilepoints[];
 
 
@@ -60,6 +63,7 @@ namespace planetX
           Lathe *lathe;
           PlanetX themeParkX;
           //MySweepSurface mysweepsurface;
+          FerrisWheel wheel;
           long int timeold,timenew,elapseTime;
           vector<vec3> pts, ptsTransformed,points3d;
           vector<vec2> points;
@@ -142,7 +146,6 @@ namespace planetX
                     themeParkX.draw();
 
                glDisable(GL_TEXTURE_2D);
-
                themeParkX.drawRails();
                themeParkX.drawTrain();
                themeParkX.drawCups(toggleDir);
@@ -156,8 +159,8 @@ namespace planetX
 			timenew = glutGet(GLUT_ELAPSED_TIME);
 			elapseTime = timenew - timeold;
 			timeold = timenew;
+			wheel.tickTime(elapseTime);
 			themeParkX.tickTime(elapseTime);
-
 		}
 		//for any one-time only initialization of the
 		// virtual world before any rendering takes place
