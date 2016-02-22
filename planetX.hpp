@@ -33,6 +33,7 @@ namespace planetX
                ///unfinished
                void drawCups();
                void drawEyesOnVader();
+               static GLfloat profilepoints[];
 
 
 
@@ -40,6 +41,7 @@ namespace planetX
                GLfloat velx,vely,velz;
                GLfloat posx,posy,posz;
                GLfloat roty;
+
 
 
      };
@@ -124,7 +126,19 @@ namespace planetX
                themeParkX.draw();
                themeParkX.drawRails();
                themeParkX.drawTrain();
-               mysweepsurface.draw();
+               //themeParkX.drawCups();
+               glColor3f(1.0f,1.0f,1.0f);
+               /// Cups Drawing
+               glPushMatrix();
+                    glRotatef(90.0f,1.0f,0.0f,0.0f);
+                    glTranslatef(0.0f,13.0f,-1.0f);
+                    mysweepsurface.draw();
+               glPopMatrix();
+               glPushMatrix();
+                    glRotatef(60.0f,1.0f,0.0f,0.0f);
+                    glTranslatef(0.0f,12.5f,-1.0f);
+                    mysweepsurface.draw();
+               glPopMatrix();
                //replicate->draw();
 		}
 
@@ -147,15 +161,15 @@ namespace planetX
 			///initializing for sweep
                static GLfloat profilepoints[] =
                {
-                    4.0f, 2.0f, 0.0f,
-                    1.0f, 2.0f, 0.0f,
-               1.0f, 6.0f, 0.0f,
-               4.0f, 7.0f, 0.0f,
-               6.0f, 8.0f, 0.0f,
-               7.0f, 9.0f, 0.0f,
-               7.5f, 10.0f, 0.0f
+                    //4.0f, 2.0f, 0.0f,
+                    //1.0f, 2.0f, 0.0f,
+                    1.0f, 3.0f, 0.0f,
+                    2.0f, 2.0f, 0.0f,
+                    3.0f, 2.0f, 0.0f,
+                    4.0f, 4.5f, 0.0f,
+                    4.5f, 5.0f, 0.0f
                };
-               mysweepsurface.setup(profilepoints, 8, 0, 360, 5);
+               mysweepsurface.setup(profilepoints, 6, 0, 360, 1);
 
 
 			/// initializing variables for spline creation

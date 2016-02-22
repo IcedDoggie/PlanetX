@@ -162,10 +162,10 @@ void PlanetX::drawSpaceRide()
 
 void PlanetX::drawCups()
 {
-     MySweepSurface mysweepsurface;
+
 
      glColor3f(1.0f,1.0f,1.0f);
-     mysweepsurface.draw();
+
      glPushMatrix();
 
      glPopMatrix();

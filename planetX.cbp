@@ -54,6 +54,8 @@
 		<Unit filename="cubeShaper.hpp" />
 		<Unit filename="planetX.cpp" />
 		<Unit filename="planetX.hpp" />
+		<Unit filename="sweep.cpp" />
+		<Unit filename="sweep.hpp" />
 		<Unit filename="utilities/Drawable.hpp" />
 		<Unit filename="utilities/Extrusion.cpp" />
 		<Unit filename="utilities/Extrusion.hpp" />
