@@ -31,7 +31,7 @@ namespace planetX
                void drawSpaceRide();
                void tickTime(long int elapseTime);
                ///unfinished
-               void drawCups();
+               void drawCups(bool toggler);
                void drawEyesOnVader();
                static GLfloat profilepoints[];
 
@@ -41,7 +41,7 @@ namespace planetX
                GLfloat velx,vely,velz;
                GLfloat posx,posy,posz;
                GLfloat roty;
-
+               bool toggleDir;
 
 
      };
@@ -61,6 +61,8 @@ namespace planetX
           long int timeold,timenew,elapseTime;
           vector<vec3> pts, ptsTransformed,points3d;
           vector<vec2> points;
+          bool toggleDir=true;
+
 
 
 
@@ -126,7 +128,7 @@ namespace planetX
                themeParkX.draw();
                themeParkX.drawRails();
                themeParkX.drawTrain();
-               themeParkX.drawCups();
+               themeParkX.drawCups(toggleDir);
 
                //replicate->draw();
 		}

@@ -160,7 +160,7 @@ void PlanetX::drawSpaceRide()
      glPopMatrix();
 }
 
-void PlanetX::drawCups()
+void PlanetX::drawCups(bool toggleDir)
 {
      MySweepSurface sweep;
      static  GLfloat profilepoints[] =
@@ -178,6 +178,7 @@ void PlanetX::drawCups()
      ///some credentials
      float rotateDegree;
      float radius = 13.0f;
+     int counter = 0;
 
      glColor3f(1.0f,1.0f,1.0f);
      glPushMatrix();
@@ -186,13 +187,20 @@ void PlanetX::drawCups()
           sweep.draw();
      glPopMatrix();
      glPushMatrix();
-          glTranslatef(posx,posy,posz);
+
+     glTranslatef(posx,posy,posz);
+     if(toggleDir==true)
           glRotatef(roty,0.0f,0.0f,1.0f);
+     else
+          glRotatef(-roty,0.0f,0.0f,1.0f);
+
+
           glPushMatrix();
                glRotatef(60.0f,1.0f,0.0f,0.0f);
                glTranslatef(0.0f,radius+sin(90*3.142/180),0.0f);
                sweep.draw();
           glPopMatrix();
+
           glPushMatrix();
                glRotatef(120.0f,1.0f,0.0f,0.0f);
                glTranslatef(0.0f,radius+sin(120*3.142/180),0.0f);

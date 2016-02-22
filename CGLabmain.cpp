@@ -186,6 +186,11 @@ void mySpecialFunc(int key, int x, int y)
                           break;
      case GLUT_KEY_F4 : myvirtualworld.toggleTextures();
                          break;
+     case GLUT_KEY_F5 : myvirtualworld.toggleDir= false;
+                         break;
+     case GLUT_KEY_F6 : myvirtualworld.toggleDir= true;
+                         break;
+
  }
  glutPostRedisplay();
 }
