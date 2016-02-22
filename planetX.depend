@@ -16,13 +16,14 @@
 	<iostream>
 	<GL/glut.h>
 
-1456151322 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1456152560 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
 	"CGimageloader.hpp"
 	"sweep.hpp"
 	"ferriswheel.hpp"
+	"alien.hpp"
 	<cmath>
 	"utilities/Mesh.hpp"
 	"utilities/Extrusion.hpp"
@@ -30,13 +31,14 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1456139385 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1456151908 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
 	"CGimageloader.hpp"
 	"sweep.hpp"
+	"ferriswheel.hpp"
 	<cmath>
 	<cstdlib>
 	<ctime>
@@ -198,4 +200,12 @@
 
 1456148850 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\ferriswheel.hpp
 	<iostream>
+
+1456152645 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\alien.hpp
+	<iostream>
+
+1456152653 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\alien.cpp
+	<GL/glut.h>
+	<iostream>
+	"alien.hpp"
 

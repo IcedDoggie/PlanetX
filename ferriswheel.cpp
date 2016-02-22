@@ -89,16 +89,16 @@ void FerrisWheel::drawCarriage()
         glTranslatef( 0.0f, 2.5f, 0.0f);
 
         // Draw passengers
-//        Alien passenger;
-//        passenger.setHeadColour(1.0f, 0.0f, 0.0f);
-//        passenger.setBodyColour(0.0f, 1.0f, 0.0f);
-//
-//        glPushMatrix();
-//            glTranslatef( -1.0f, -5.0f, 0.0f);
-//            passenger.draw();
-//            glTranslatef( 2.0f, 0.0f, 0.0f);
-//            passenger.draw();
-//        glPopMatrix();
+        Alien passenger;
+        passenger.setHeadColour(1.0f, 0.0f, 0.0f);
+        passenger.setBodyColour(0.0f, 1.0f, 0.0f);
+
+        glPushMatrix();
+            glTranslatef( -1.0f, -5.0f, 0.0f);
+            passenger.draw();
+            glTranslatef( 2.0f, 0.0f, 0.0f);
+            passenger.draw();
+        glPopMatrix();
 
         // Draw carriage
         glPushMatrix();

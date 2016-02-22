@@ -12,6 +12,7 @@ Objective: Header File for Lab05 on Points & Lines
 #include "CGimageloader.hpp"
 #include "sweep.hpp"
 #include "ferriswheel.hpp"
+#include "alien.hpp"
 #include <cmath>
 #include "utilities/Mesh.hpp"
 #include "utilities/Extrusion.hpp"
