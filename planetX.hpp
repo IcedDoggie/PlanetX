@@ -64,8 +64,6 @@ namespace planetX
           bool toggleDir=true;
 
 
-
-
           MyVirtualWorld()
           {
                numberOfTexture = 0;
@@ -91,9 +89,9 @@ namespace planetX
                glGenTextures(numberOfTexture, textureNumbers);
                //Read image data into memory
                MyImage myimage[numberOfTexture];
-               myimage[0].loadJPG("images/marble1.jpg");
-               myimage[1].loadJPG("images/wood1.jpg");
-               myimage[2].loadJPG("images/brick1.jpg");
+               myimage[0].loadJPG("data/planetXtex.jpg");
+//               myimage[1].loadJPG("images/wood1.jpg");
+//               myimage[2].loadJPG("images/brick1.jpg");
                //Try this: myimage[2].loadBMP("images/rocks.bmp");
                //for each texture map identifiers
                for (int i=0; i<numberOfTexture; i++)
@@ -125,7 +123,18 @@ namespace planetX
 
 		void draw()
 		{
-               themeParkX.draw();
+		     ///texture mapping
+               glEnable(GL_TEXTURE_2D);
+
+                    glBindTexture(GL_TEXTURE_2D,textureNumbers[0] );
+                    glEnable(GL_TEXTURE_GEN_S);
+                    glEnable(GL_TEXTURE_GEN_T);
+                    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_OBJECT_LINEAR);
+                    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+                    themeParkX.draw();
+
+               glDisable(GL_TEXTURE_2D);
+
                themeParkX.drawRails();
                themeParkX.drawTrain();
                themeParkX.drawCups(toggleDir);
@@ -187,6 +196,7 @@ namespace planetX
                int numberOfTexture;
                GLuint* textureNumbers;
                bool textureison;
+               //MyImage myimage[3];
 	};
 }; //end of namespace CGLab08
 #endif //YP_CGLAB08_HPP

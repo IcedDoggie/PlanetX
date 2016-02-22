@@ -180,6 +180,8 @@ void PlanetX::drawCups(bool toggleDir)
      float radius = 13.0f;
      int counter = 0;
 
+
+
      glColor3f(1.0f,1.0f,1.0f);
      glPushMatrix();
           glRotatef(90.0f,1.0f,0.0f,0.0f);
@@ -193,7 +195,6 @@ void PlanetX::drawCups(bool toggleDir)
           glRotatef(roty,0.0f,0.0f,1.0f);
      else
           glRotatef(-roty,0.0f,0.0f,1.0f);
-
 
           glPushMatrix();
                glRotatef(60.0f,1.0f,0.0f,0.0f);
