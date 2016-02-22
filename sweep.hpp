@@ -21,7 +21,7 @@ class MySweepSurface
           GLfloat degreeEnd,
           GLfloat degreeStep );
           void draw();
-     private:
+
           const GLfloat* profilepoints;
           GLint numofprofilepoints;
           GLfloat *surfacepoints;

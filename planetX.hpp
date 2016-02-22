@@ -126,19 +126,22 @@ namespace planetX
                themeParkX.draw();
                themeParkX.drawRails();
                themeParkX.drawTrain();
-               //themeParkX.drawCups();
-               glColor3f(1.0f,1.0f,1.0f);
-               /// Cups Drawing
-               glPushMatrix();
-                    glRotatef(90.0f,1.0f,0.0f,0.0f);
-                    glTranslatef(0.0f,13.0f,-1.0f);
-                    mysweepsurface.draw();
-               glPopMatrix();
-               glPushMatrix();
-                    glRotatef(60.0f,1.0f,0.0f,0.0f);
-                    glTranslatef(0.0f,12.5f,-1.0f);
-                    mysweepsurface.draw();
-               glPopMatrix();
+               themeParkX.drawCups();
+//               glColor3f(1.0f,1.0f,1.0f);
+//               /// Cups Drawing
+//               glPushMatrix();
+//                    glRotatef(90.0f,1.0f,0.0f,0.0f);
+//                    glTranslatef(0.0f,13.0f,-1.0f);
+//                    mysweepsurface.draw();
+//               glPopMatrix();
+//               glPushMatrix();
+//                    glRotatef(60.0f,1.0f,0.0f,0.0f);
+//                    glTranslatef(0.0f,12.5f,-1.0f);
+//                    mysweepsurface.draw();
+//               glPopMatrix();
+
+
+               ///Cups Drawing ends
                //replicate->draw();
 		}
 
@@ -159,17 +162,7 @@ namespace planetX
 			timeold = glutGet(GLUT_ELAPSED_TIME);
 
 			///initializing for sweep
-               static GLfloat profilepoints[] =
-               {
-                    //4.0f, 2.0f, 0.0f,
-                    //1.0f, 2.0f, 0.0f,
-                    1.0f, 3.0f, 0.0f,
-                    2.0f, 2.0f, 0.0f,
-                    3.0f, 2.0f, 0.0f,
-                    4.0f, 4.5f, 0.0f,
-                    4.5f, 5.0f, 0.0f
-               };
-               mysweepsurface.setup(profilepoints, 6, 0, 360, 1);
+
 
 
 			/// initializing variables for spline creation

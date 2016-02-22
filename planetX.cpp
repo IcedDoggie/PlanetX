@@ -162,10 +162,21 @@ void PlanetX::drawSpaceRide()
 
 void PlanetX::drawCups()
 {
-
+     MySweepSurface sweep;
+     static  GLfloat profilepoints[] =
+     {
+          //4.0f, 2.0f, 0.0f,
+          //1.0f, 2.0f, 0.0f,
+          1.0f, 3.0f, 0.0f,
+          2.0f, 2.0f, 0.0f,
+          3.0f, 2.0f, 0.0f,
+          4.0f, 4.5f, 0.0f,
+          4.5f, 5.0f, 0.0f
+     };
+     sweep.setup(profilepoints, 6, 0, 360, 1);
 
      glColor3f(1.0f,1.0f,1.0f);
-
+     sweep.draw();
      glPushMatrix();
 
      glPopMatrix();

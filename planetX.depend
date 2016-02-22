@@ -16,7 +16,7 @@
 	<iostream>
 	<GL/glut.h>
 
-1456133830 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
+1456134677 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.hpp
 	"CGLabmain.hpp"
 	"bezier.hpp"
 	"cubeShaper.hpp"
@@ -29,7 +29,7 @@
 	"utilities/Replicate.hpp"
 	"utilities/Lathe.hpp"
 
-1456127182 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
+1456134653 source:e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\planetx.cpp
 	<GL/glut.h>
 	"planetX.hpp"
 	"bezier.hpp"
@@ -184,7 +184,7 @@
 	<iostream>
 	<cmath>
 
-1456087925 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\sweep.hpp
+1456134356 e:\documents\mmu studies\degree 2nd year\second sem\cg\assignment\planetx\sweep.hpp
 	<iostream>
 	"CGLabmain.hpp"
 

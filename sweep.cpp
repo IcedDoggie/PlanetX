@@ -10,10 +10,12 @@ GLfloat degreeStep )
 {
      profilepoints = profilePoints;
      numofprofilepoints = numOfProfilePoints;
-     if (surfacepoints)
-          delete[] surfacepoints;
+//     if (surfacepoints)
+//          delete[] surfacepoints;
+
      numofverticallines = 1 + static_cast<int>(floor((degreeEnd - degreeStart)/degreeStep));
      numofsurfacepoints = numofprofilepoints* numofverticallines;
+
      surfacepoints = new GLfloat[3 * numofsurfacepoints];
      int surfptsindex = 0;
      GLfloat degree = degreeStart;
